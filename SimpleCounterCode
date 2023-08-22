@@ -1,0 +1,32 @@
+using System;
+
+namespace SimpleCounter
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+
+            Console.WriteLine("Press the spacebar to increase the counter by one.");
+            Console.WriteLine("Press 'q' to quit.");
+
+            while (true)
+            {
+                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
+                if (keyInfo.Key == ConsoleKey.Spacebar)
+                {
+                    counter++;
+                    Console.WriteLine($"Counter: {counter}");
+                }
+                else if (keyInfo.Key == ConsoleKey.Q)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine($"Final count: {counter}");
+        }
+    }
+}
